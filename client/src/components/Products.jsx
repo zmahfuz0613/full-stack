@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './Products.css'
-
 import Product from './Product'
 import Search from './Search'
 import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
@@ -68,7 +67,7 @@ class Products extends Component {
   render() {
     const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
     const PRODUCTS = products.map((product, index) =>
-      <Product id={product.id} name={product.name} imgURL={product.imgURL} price={product.price} key={index} />
+      <Product _id={product._id} name={product.name} imgURL={product.imgURL} price={product.price} key={index} />
     )
 
     return (

@@ -33,8 +33,8 @@ class ProductDetail extends Component {
                         <div className="price">{`$${product.price}`}</div>
                         <div className="description">{product.description}</div>
                         <div className="button-container">
-                        <button className="edit-button"><Link className="edit-link" to={`/products/${product.id}/edit`}>Edit</Link></button>
-                            <button className="delete-button" onClick={() => deleteProduct(product.id)}>Delete</button>
+                        <button className="edit-button"><Link className="edit-link" to={`/products/${product._id}/edit`}>Edit</Link></button>
+                            <button className="delete-button" onClick={() => deleteProduct(product._id)}>Delete</button>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,7 @@ class ProductCards extends Component {
   render() {
 
     const CARDS = this.state.products.reverse().map((product, index) =>
-      index < 8 ? <ProductCard id={product.id} name={product.name} imgURL={product.imgURL} key={index} /> : null
+      index < 8 ? <ProductCard _id={product._id} name={product.name} imgURL={product.imgURL} key={index} /> : null
     )
 
     return (

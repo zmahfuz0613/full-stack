@@ -82,7 +82,6 @@ class ProductEdit extends Component {
                             value={product.price}
                             name='price'
                             required
-                            autoFocus
                             onChange={this.handleChange}
                         />
                         <textarea

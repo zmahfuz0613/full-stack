@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './ProductCreate.css'
 import Layout from './shared/Layout'
+import { Redirect } from 'react-router-dom'
 import { createProduct } from '../services/products'
 
 class ProductCreate extends Component {
@@ -12,7 +13,8 @@ class ProductCreate extends Component {
                 description: '',
                 imgURL: '',
                 price: ''
-            }
+            },
+            created: false
         }
     }
 
@@ -28,11 +30,16 @@ class ProductCreate extends Component {
 
     handleSubmit = async (event) => {
         event.preventDefault()
-        await createProduct(this.state.product)
+        const created = await createProduct(this.state.product)
+        this.setState({ created })
     }
 
     render() {
-        const { product } = this.state
+        const { product, created } = this.state
+
+        if (created) {
+            return <Redirect to={`/products`} />
+        }
         return (
             <Layout>
                 <form className="create-form" onSubmit={this.handleSubmit}>
@@ -51,7 +58,6 @@ class ProductCreate extends Component {
                         value={product.price}
                         name='price'
                         required
-                        autoFocus
                         onChange={this.handleChange}
                     />
                     <textarea
