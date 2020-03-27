@@ -1,7 +1,7 @@
 .product-detail {
     display: flex;
     padding: 100px;
-    padding-top: 150px;
+    padding-top: 80px;
 }
 
 .detail {
@@ -27,6 +27,7 @@
 
 .product-detail-image {
     width: 500px;
+    padding: 0 40px;
 }
 
 .button-container {
