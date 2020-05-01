@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-const jsonWebToken = localStorage.getItem('token') || null
-
 let apiUrl
 
 const apiUrls = {
