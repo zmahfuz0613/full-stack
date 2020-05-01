@@ -16,11 +16,7 @@ if (window.location.hostname === 'localhost') {
 }
 
 const api = axios.create({
-    baseURL: apiUrl,
-    headers: {
-        Authorization: `Bearer ${jsonWebToken}`,
-        'Access-Control-Allow-Origin': '*'
-    }
+    baseURL: apiUrl
 })
 
 export default api
