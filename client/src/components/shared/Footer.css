@@ -5,7 +5,3 @@ footer {
     flex: 1;
     padding: 20px;
 }
-
-footer a {
-    text-decoration: underline;
-}

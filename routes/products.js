@@ -1,8 +1,8 @@
 const { Router } = require('express')
-const controllers = require('../controllers')
+const controllers = require('../controllers/products')
+
 const router = Router()
 
-router.get('/', (req, res) => res.send('This is root!'))
 router.get('/products', controllers.getProducts)
 router.get('/products/:id', controllers.getProduct)
 router.post('/products', controllers.createProduct)

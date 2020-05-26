@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './Products.css'
 import Product from './Product'
 import Search from './Search'
-import { AZ, ZA, lowestFirst, highestFirst } from "./Sort"
+import { AZ, ZA, lowestFirst, highestFirst } from './Sort'
 import Layout from './shared/Layout'
 import { getProducts } from '../services/products'
 
@@ -33,9 +33,9 @@ class Products extends Component {
   }
 
   handleSortChange = event => {
-    this.setState({ selectValue: event.target.value });
-    let input = event.target.value; // a-z
-    const { products } = this.state;
+    this.setState({ selectValue: event.target.value })
+    let input = event.target.value // a-z
+    const products = this.state.filteredProducts ? this.state.filteredProducts : this.state.products
     switch (input) {
       case "name-ascending":
         this.setState({
